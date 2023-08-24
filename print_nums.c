@@ -1,6 +1,31 @@
 #include "main.h"
 
 /**
+ * count_digit - counts digits to be printed
+ * @n: the variable digit to be printed
+ *
+ * Description: the function that prints the number of digits
+ * Return: string of digits
+ */
+
+int count_digit(int n)
+
+{
+        int count = 0;
+
+        if (n == 0)
+        {
+                return (1);
+        }
+        while (n != 0)
+        {
+                n /= 10;
+                count++;
+        }
+        return (count);
+}
+
+/**
  * print_int - prints an integer
  * @l: va_list of arguments from _printf
  * @f: pointer to the struct flags determining
@@ -60,25 +85,3 @@ void print_number(int n)
 	_putchar((n1 % 10) + '0');
 }
 
-/**
- * count_digit - returns the number of digits in an integer
- * for _printf
- * @i: integer to evaluate
- * Return: number of digits
- */
-int count_digit(int i)
-{
-	unsigned int d = 0;
-	unsigned int u;
-
-	if (i < 0)
-		u = i * -1;
-	else
-		u = i;
-	while (u != 0)
-	{
-		u /= 10;
-		d++;
-	}
-	return (d);
-}
