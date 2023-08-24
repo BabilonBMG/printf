@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdarg.h>
+#include <stdio.h>
 
 
 /**
@@ -20,6 +22,7 @@ int print_int(va_list l, flags_t *f)
 	if (n <= 0)
 		res++;
 	print_number(n);
+
 	return (res);
 }
 
@@ -43,6 +46,7 @@ int print_unsigned(va_list l, flags_t *f)
  * print_number - helper function that loops through
  * an integer and prints all its digits
  * @n: integer to be printed
+ *
  */
 void print_number(int n)
 {

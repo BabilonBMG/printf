@@ -25,6 +25,7 @@ int _putchar(char c)
 		i++;
 	}
 	return (1);
+}
 
 /**
  * _puts - prints a string to stdout
